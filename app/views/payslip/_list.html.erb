@@ -1,0 +1,37 @@
+
+
+<h3 class="mt-5">Employee Payslip Details</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Staff</th>
+      <th>Pay Period</th>
+      <th>Gross Income</th>
+      <th>Income Tax</th>
+      <th>Net Income</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+        <% if @payslips %>
+        <tr>
+          <td><%= payslips.first_name %></td>
+          <td><%= payslips.last_name %></td>
+          <td><%= payslips.staff_id %></td>
+          <td><%= payslips.email %></td>
+          <td><%= payslips.phone %></td>
+          <td>RM <%= payslips.annual_salary %></td>
+          <td><%= payslips.rate %> %</td>
+          <td><%= payslips.create_date %></td>
+          <td><%= payslips.update_date %></td>
+          <td><%= link_to 'Show', employee %></td>
+        </tr>
+        <% end %>
+  </tbody>
+</table>
+
+

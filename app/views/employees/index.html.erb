@@ -1,0 +1,41 @@
+<h1>Employees</h1>
+
+<%= link_to 'Add Employee', new_employee_path, class:"btn btn-primary mb-3" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Staff</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Annual salary</th>
+      <th>Rate</th>
+      <th>Create date</th>
+      <th>Update date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.first_name %></td>
+        <td><%= employee.last_name %></td>
+        <td><%= employee.staff_id %></td>
+        <td><%= employee.email %></td>
+        <td><%= employee.phone %></td>
+        <td>RM <%= employee.annual_salary %></td>
+        <td><%= employee.rate %> %</td>
+        <td><%= employee.create_date %></td>
+        <td><%= employee.update_date %></td>
+        <td><%= link_to 'Show', employee %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

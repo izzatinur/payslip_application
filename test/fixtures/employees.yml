@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  staff_id: MyString
+  email: MyString
+  phone: MyString
+  annual_salary: 9.99
+  rate: 9.99
+  create_date: 2021-06-05 20:58:56
+  update_date: 2021-06-05 20:58:56
+
+two:
+  first_name: MyString
+  last_name: MyString
+  staff_id: MyString
+  email: MyString
+  phone: MyString
+  annual_salary: 9.99
+  rate: 9.99
+  create_date: 2021-06-05 20:58:56
+  update_date: 2021-06-05 20:58:56

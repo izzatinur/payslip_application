@@ -1,0 +1,62 @@
+<%= form_with(model: employee) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+        <% employee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :staff_id %>
+    <%= form.text_field :staff_id, class:"form-control", placeholder:"Staff Id" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control", placeholder:"Email" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, class:"form-control", placeholder:"Phone" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :annual_salary %>
+    <%= form.text_field :annual_salary, class:"form-control", placeholder:"Annual Salary (RM)" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :rate %>
+    <%= form.text_field :rate, class:"form-control", placeholder:"Rates (%)" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :create_date %>
+    <%= form.datetime_select :create_date, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :update_date %>
+    <%= form.datetime_select :update_date, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-primary' %>
+  </div>
+<% end %>

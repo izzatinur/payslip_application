@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  min_income: 1
+  max_income: 1
+  rates: 9.99
+  tax_amount: 1
+
+two:
+  min_income: 1
+  max_income: 1
+  rates: 9.99
+  tax_amount: 1
